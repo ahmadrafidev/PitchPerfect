@@ -15,18 +15,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZ2-sf-MEX">
+                                <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ZQ-a8-KOh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fq-RP-Vj9">
+                                <rect key="frame" x="154" y="482" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxe-kT-ejF">
+                                <rect key="frame" x="155" y="511" width="104" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Stop Record"/>
+                                <connections>
+                                    <action selector="stopRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zDT-DE-hoi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dxe-kT-ejF" firstAttribute="firstBaseline" secondItem="8Fq-RP-Vj9" secondAttribute="baseline" constant="33" symbolType="layoutAnchor" id="IaI-BV-Ujq"/>
+                            <constraint firstItem="8Fq-RP-Vj9" firstAttribute="top" secondItem="VZ2-sf-MEX" secondAttribute="bottom" constant="18.5" id="P8c-fF-duf"/>
+                            <constraint firstItem="VZ2-sf-MEX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="S4E-WB-oU7"/>
+                            <constraint firstItem="VZ2-sf-MEX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T1V-cv-Lb4"/>
+                            <constraint firstItem="8Fq-RP-Vj9" firstAttribute="centerX" secondItem="VZ2-sf-MEX" secondAttribute="centerX" id="afZ-vO-1a1"/>
+                            <constraint firstItem="Dxe-kT-ejF" firstAttribute="centerX" secondItem="8Fq-RP-Vj9" secondAttribute="centerX" id="bhf-f2-wu4"/>
+                            <constraint firstItem="Dxe-kT-ejF" firstAttribute="top" secondItem="8Fq-RP-Vj9" secondAttribute="bottom" constant="8" symbolic="YES" id="eTZ-nr-RS9"/>
+                            <constraint firstItem="Dxe-kT-ejF" firstAttribute="centerX" secondItem="8Fq-RP-Vj9" secondAttribute="centerX" id="mFc-ir-Yz0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recordLabel" destination="8Fq-RP-Vj9" id="2DV-BJ-u5E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="84"/>
+            <point key="canvasLocation" x="34.782608695652179" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
