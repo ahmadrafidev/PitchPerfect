@@ -17,24 +17,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZ2-sf-MEX">
-                                <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <rect key="frame" x="117.5" y="363.5" width="179" height="169"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Record"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ZQ-a8-KOh"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fq-RP-Vj9">
-                                <rect key="frame" x="154" y="482" width="106" height="21"/>
+                                <rect key="frame" x="154" y="551" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxe-kT-ejF">
-                                <rect key="frame" x="155" y="511" width="104" height="31"/>
+                                <rect key="frame" x="117.5" y="580" width="179" height="169"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Stop Record"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zDT-DE-hoi"/>
                                 </connections>
@@ -50,11 +49,15 @@
                             <constraint firstItem="8Fq-RP-Vj9" firstAttribute="centerX" secondItem="VZ2-sf-MEX" secondAttribute="centerX" id="afZ-vO-1a1"/>
                             <constraint firstItem="Dxe-kT-ejF" firstAttribute="centerX" secondItem="8Fq-RP-Vj9" secondAttribute="centerX" id="bhf-f2-wu4"/>
                             <constraint firstItem="Dxe-kT-ejF" firstAttribute="top" secondItem="8Fq-RP-Vj9" secondAttribute="bottom" constant="8" symbolic="YES" id="eTZ-nr-RS9"/>
+                            <constraint firstItem="Dxe-kT-ejF" firstAttribute="top" secondItem="8Fq-RP-Vj9" secondAttribute="bottom" constant="64" id="kp5-rz-UjO"/>
                             <constraint firstItem="Dxe-kT-ejF" firstAttribute="centerX" secondItem="8Fq-RP-Vj9" secondAttribute="centerX" id="mFc-ir-Yz0"/>
+                            <constraint firstItem="Dxe-kT-ejF" firstAttribute="top" secondItem="8Fq-RP-Vj9" secondAttribute="bottom" constant="64" id="rZf-AS-v4K"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="recordButton" destination="VZ2-sf-MEX" id="aSM-U8-GMx"/>
                         <outlet property="recordLabel" destination="8Fq-RP-Vj9" id="2DV-BJ-u5E"/>
+                        <outlet property="stopRecordingButton" destination="Dxe-kT-ejF" id="eYc-sx-yag"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -63,11 +66,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Record" width="155" height="155"/>
+        <image name="Stop" width="155" height="155"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
